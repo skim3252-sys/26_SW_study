@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="01_struct-class/01_struct-class.vcxproj" />
+  <Project Path="01_struct_class.vcxproj" />
 </Solution>

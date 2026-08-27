@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{4b433c94-45ee-46af-ae34-a1e312c74e61}</ProjectGuid>
+    <ProjectGuid>{f049f599-2412-4036-92d4-ab003e7caeb4}</ProjectGuid>
     <RootNamespace>My01structclass</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -139,7 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01_struct-class.cpp" />
+    <ClCompile Include="01_struct_class.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
