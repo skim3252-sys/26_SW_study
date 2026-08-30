@@ -1,0 +1,6 @@
+# ninja log v7
+28	1072	8098016478865016	CMakeFiles/vehicle_cmake.dir/src/main.cpp.obj	506f789e70c4ecde
+29	1059	8098015042065241	CMakeFiles/vehicle_cmake.dir/src/Vehicle.cpp.obj	c89276147efee024
+1074	1416	8098016489333743	vehicle_cmake.exe	f1e33fc1b600289a
+34	407	8098018444526928	build.ninja	1f45cec93ef3dfe2
+34	407	8098018444349101	C:/바탕화면/automotive-sw-study/01_modern_cpp/week01_project_structure/02_cmake_build/out/build/x64-Debug/cmake_install.cmake	1f45cec93ef3dfe2
