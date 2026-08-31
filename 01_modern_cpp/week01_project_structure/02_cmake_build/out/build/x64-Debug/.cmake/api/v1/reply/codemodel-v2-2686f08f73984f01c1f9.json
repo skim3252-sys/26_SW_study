@@ -16,7 +16,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -31,7 +32,8 @@
 					"name" : "vehicle_cmake",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,9 +41,16 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "vehicle_cmake::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-vehicle_cmake-Debug-dea4475f0382b6b605e2.json",
-					"name" : "vehicle_cmake",
+					"id" : "vehicle_cmake_app::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vehicle_cmake_app-Debug-ec0f620028dafe4af47e.json",
+					"name" : "vehicle_cmake_app",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vehicle_cmake_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vehicle_cmake_lib-Debug-a28bbf75d29d2aefab96.json",
+					"name" : "vehicle_cmake_lib",
 					"projectIndex" : 0
 				}
 			]

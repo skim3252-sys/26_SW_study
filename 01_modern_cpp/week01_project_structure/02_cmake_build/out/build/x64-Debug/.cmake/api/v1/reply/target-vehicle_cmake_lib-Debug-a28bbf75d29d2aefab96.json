@@ -2,10 +2,13 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "vehicle_cmake.exe"
+			"path" : "vehicle_cmake_lib.dll"
 		},
 		{
-			"path" : "vehicle_cmake.pdb"
+			"path" : "vehicle_cmake_lib.lib"
+		},
+		{
+			"path" : "vehicle_cmake_lib.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -13,7 +16,7 @@
 	{
 		"commands" : 
 		[
-			"add_executable",
+			"add_library",
 			"target_include_directories"
 		],
 		"files" : 
@@ -34,7 +37,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 13,
+				"line" : 18,
 				"parent" : 0
 			}
 		]
@@ -51,6 +54,12 @@
 			[
 				{
 					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "vehicle_cmake_lib_EXPORTS"
 				}
 			],
 			"includes" : 
@@ -71,26 +80,21 @@
 			},
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
-	"id" : "vehicle_cmake::@6890427a1f51a3e7e1df",
+	"id" : "vehicle_cmake_lib::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd",
-				"role" : "flags"
-			},
-			{
 				"fragment" : "/machine:x64 /debug /INCREMENTAL",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/subsystem:console",
+				"fragment" : "/DEF:CMakeFiles\\vehicle_cmake_lib.dir\\.\\exports.def",
 				"role" : "flags"
 			},
 			{
@@ -100,8 +104,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "vehicle_cmake",
-	"nameOnDisk" : "vehicle_cmake.exe",
+	"name" : "vehicle_cmake_lib",
+	"nameOnDisk" : "vehicle_cmake_lib.dll",
 	"paths" : 
 	{
 		"build" : ".",
@@ -113,8 +117,7 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
@@ -123,15 +126,9 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/main.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "src/Vehicle.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "EXECUTABLE"
+	"type" : "SHARED_LIBRARY"
 }
