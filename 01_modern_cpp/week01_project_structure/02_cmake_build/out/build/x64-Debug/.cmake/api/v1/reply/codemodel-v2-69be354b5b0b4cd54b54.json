@@ -21,21 +21,6 @@
 					"source" : "."
 				},
 				{
-					"build" : "app",
-					"jsonFile" : "directory-app-Debug-1263e082e6b8e9b17c43.json",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.20"
-					},
-					"parentIndex" : 0,
-					"projectIndex" : 0,
-					"source" : "app",
-					"targetIndexes" : 
-					[
-						0
-					]
-				},
-				{
 					"build" : "vehicle",
 					"jsonFile" : "directory-vehicle-Debug-7d28518540698686a315.json",
 					"minimumCMakeVersion" : 
@@ -48,6 +33,21 @@
 					"targetIndexes" : 
 					[
 						1
+					]
+				},
+				{
+					"build" : "app",
+					"jsonFile" : "directory-app-Debug-1263e082e6b8e9b17c43.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "app",
+					"targetIndexes" : 
+					[
+						0
 					]
 				}
 			],
@@ -72,14 +72,14 @@
 			"targets" : 
 			[
 				{
-					"directoryIndex" : 1,
+					"directoryIndex" : 2,
 					"id" : "vehicle_app::@5f5a17c01335469806cb",
 					"jsonFile" : "target-vehicle_app-Debug-56381413a44efa0e1758.json",
 					"name" : "vehicle_app",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 2,
+					"directoryIndex" : 1,
 					"id" : "vehicle_lib::@cf4adbc2391064d8c45c",
 					"jsonFile" : "target-vehicle_lib-Debug-848d9568e7719f6dd6b2.json",
 					"name" : "vehicle_lib",

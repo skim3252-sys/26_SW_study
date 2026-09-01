@@ -34,12 +34,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/user/source/repos/26_SW_study/01_modern_cpp/week01_project_structure/02_cmake_build/out/build/x64-Debug/app/cmake_install.cmake")
+  include("C:/Users/user/source/repos/26_SW_study/01_modern_cpp/week01_project_structure/02_cmake_build/out/build/x64-Debug/vehicle/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/user/source/repos/26_SW_study/01_modern_cpp/week01_project_structure/02_cmake_build/out/build/x64-Debug/vehicle/cmake_install.cmake")
+  include("C:/Users/user/source/repos/26_SW_study/01_modern_cpp/week01_project_structure/02_cmake_build/out/build/x64-Debug/app/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
