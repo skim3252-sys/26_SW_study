@@ -1,5 +1,0 @@
-# ninja log v7
-140	1873	8099295356639719	app/CMakeFiles/vehicle_app.dir/main.cpp.obj	6743158a18691bdd
-62	1898	8099295356448892	vehicle/CMakeFiles/vehicle_lib.dir/src/Vehicle.cpp.obj	3689cab45a3b6070
-1900	2111	8099295374239419	vehicle/vehicle_lib.lib	8a262d7405c87990
-2112	3089	8099295376387254	app/vehicle_app.exe	2652fda2f0c89fa7
