@@ -217,3 +217,88 @@ CMake 생성 실패 메시지가 사라지지 않는다면 cache를 삭제하고
 
 기존 실행 파일이 남아 있으면 CMake 생성이 실패한 상태에서도
 예전 `.exe`가 실행될 수 있으므로 실행 여부만으로 빌드 성공을 판단하면 안 된다.
+
+
+## CMake add_subdirectory()
+
+프로젝트가 커지면 하나의 `CMakeLists.txt`에서 모든 target을 관리하기보다,
+기능별 폴더에 `CMakeLists.txt`를 나누어 관리할 수 있다.
+
+예:
+
+```text
+02_cmake_build/
+├─ CMakeLists.txt
+├─ vehicle/
+│  ├─ CMakeLists.txt
+│  ├─ include/
+│  │  └─ Vehicle.hpp
+│  └─ src/
+│     └─ Vehicle.cpp
+└─ app/
+   ├─ CMakeLists.txt
+   └─ main.cpp
+```
+
+최상위 `CMakeLists.txt`:
+
+```cmake
+cmake_minimum_required(VERSION 3.20)
+
+project(vehicle_cmake)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_subdirectory(vehicle)
+add_subdirectory(app)
+```
+
+`add_subdirectory()`는 해당 폴더의 `CMakeLists.txt`를 현재 빌드에 포함시킨다.
+
+### vehicle/CMakeLists.txt
+
+```cmake
+add_library(vehicle_lib STATIC
+    src/Vehicle.cpp
+)
+
+target_include_directories(vehicle_lib
+    PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+```
+
+### app/CMakeLists.txt
+
+```cmake
+add_executable(vehicle_app
+    main.cpp
+)
+
+target_link_libraries(vehicle_app
+    PRIVATE
+    vehicle_lib
+)
+```
+
+전체 관계:
+
+```text
+vehicle/
+→ vehicle_lib target 생성
+
+app/
+→ vehicle_app target 생성
+→ vehicle_lib 링크
+```
+
+`${CMAKE_CURRENT_SOURCE_DIR}`는 현재 처리 중인 `CMakeLists.txt`가 있는 폴더를 의미한다.
+
+따라서 `vehicle/CMakeLists.txt`에서:
+
+```cmake
+${CMAKE_CURRENT_SOURCE_DIR}/include
+```
+
+는 `vehicle/include`를 가리킨다.

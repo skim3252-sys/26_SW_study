@@ -1,8 +1,5 @@
 # ninja log v7
-39	1031	8098545749600529	CMakeFiles/vehicle_cmake_app.dir/src/main.cpp.obj	c2c9f2cf23350eef
-18	1036	8098545749398688	CMakeFiles/vehicle_cmake_lib.dir/src/Vehicle.cpp.obj	4b76e2c4022877ec
-1038	1757	8098545766366612	vehicle_cmake_lib.dll	84b35e677918688f
-1038	1757	8098545766366612	vehicle_cmake_lib.lib	84b35e677918688f
-1757	2383	8098545766780621	vehicle_cmake_app.exe	d9aecbd7ed15466c
-47	901	8098562673767252	vehicle_cmake_lib.dll	84b35e677918688f
-47	901	8098562673767252	vehicle_cmake_lib.lib	84b35e677918688f
+140	1873	8099295356639719	app/CMakeFiles/vehicle_app.dir/main.cpp.obj	6743158a18691bdd
+62	1898	8099295356448892	vehicle/CMakeFiles/vehicle_lib.dir/src/Vehicle.cpp.obj	3689cab45a3b6070
+1900	2111	8099295374239419	vehicle/vehicle_lib.lib	8a262d7405c87990
+2112	3089	8099295376387254	app/vehicle_app.exe	2652fda2f0c89fa7

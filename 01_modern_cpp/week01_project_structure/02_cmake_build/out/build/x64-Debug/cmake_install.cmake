@@ -1,8 +1,8 @@
-# Install script for directory: C:/바탕화면/automotive-sw-study/01_modern_cpp/week01_project_structure/02_cmake_build
+# Install script for directory: C:/Users/user/source/repos/26_SW_study/01_modern_cpp/week01_project_structure/02_cmake_build
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/바탕화면/automotive-sw-study/01_modern_cpp/week01_project_structure/02_cmake_build/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/user/source/repos/26_SW_study/01_modern_cpp/week01_project_structure/02_cmake_build/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,10 +32,20 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/user/source/repos/26_SW_study/01_modern_cpp/week01_project_structure/02_cmake_build/out/build/x64-Debug/app/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/user/source/repos/26_SW_study/01_modern_cpp/week01_project_structure/02_cmake_build/out/build/x64-Debug/vehicle/cmake_install.cmake")
+endif()
+
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/바탕화면/automotive-sw-study/01_modern_cpp/week01_project_structure/02_cmake_build/out/build/x64-Debug/install_local_manifest.txt"
+  file(WRITE "C:/Users/user/source/repos/26_SW_study/01_modern_cpp/week01_project_structure/02_cmake_build/out/build/x64-Debug/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -51,6 +61,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/바탕화면/automotive-sw-study/01_modern_cpp/week01_project_structure/02_cmake_build/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/user/source/repos/26_SW_study/01_modern_cpp/week01_project_structure/02_cmake_build/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

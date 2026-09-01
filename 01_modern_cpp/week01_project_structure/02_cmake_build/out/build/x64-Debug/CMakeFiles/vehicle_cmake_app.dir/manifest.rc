@@ -1,2 +1,0 @@
-#pragma code_page(65001)
-1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/바탕화면/automotive-sw-study/01_modern_cpp/week01_project_structure/02_cmake_build/out/build/x64-Debug/CMakeFiles/vehicle_cmake_app.dir/embed.manifest"
