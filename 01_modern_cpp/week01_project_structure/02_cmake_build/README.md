@@ -302,3 +302,82 @@ ${CMAKE_CURRENT_SOURCE_DIR}/include
 ```
 
 는 `vehicle/include`를 가리킨다.
+
+## CMake Module Dependency
+
+프로젝트를 `Vehicle → Controller → App` 구조로 확장했다.
+
+```text
+vehicle_app
+    ↓
+controller_lib
+    ↓
+vehicle_lib
+```
+
+### controller/CMakeLists.txt
+
+```cmake
+add_library(controller_lib STATIC
+    src/VehicleController.cpp
+)
+
+target_include_directories(controller_lib
+    PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+target_link_libraries(controller_lib
+    PUBLIC
+    vehicle_lib
+)
+```
+
+`controller_lib`은 내부에서 `Vehicle.hpp`를 사용하므로 `vehicle_lib`에 의존한다.
+
+`PUBLIC`으로 연결하면 `controller_lib`을 사용하는 target에도
+`vehicle_lib`의 include 경로와 dependency가 전달된다.
+
+즉 `vehicle_app`은 직접 `vehicle_lib`을 링크하지 않아도:
+
+```cmake
+target_link_libraries(vehicle_app
+    PRIVATE
+    controller_lib
+)
+```
+
+를 통해 `Vehicle.hpp`를 사용할 수 있다.
+
+반대로:
+
+```cmake
+target_link_libraries(controller_lib
+    PRIVATE
+    vehicle_lib
+)
+```
+
+로 변경하면 `controller_lib` 자체는 `vehicle_lib`을 사용할 수 있지만,
+그 의존성이 `vehicle_app`까지 전달되지 않는다.
+
+이처럼 다른 target을 거쳐 dependency가 전달되는 것을
+**transitive dependency**라고 한다.
+
+### 현재 구조
+
+```text
+02_cmake_build/
+├─ CMakeLists.txt
+├─ vehicle/
+│  ├─ CMakeLists.txt
+│  ├─ include/Vehicle.hpp
+│  └─ src/Vehicle.cpp
+├─ controller/
+│  ├─ CMakeLists.txt
+│  ├─ include/VehicleController.hpp
+│  └─ src/VehicleController.cpp
+└─ app/
+   ├─ CMakeLists.txt
+   └─ main.cpp
+```

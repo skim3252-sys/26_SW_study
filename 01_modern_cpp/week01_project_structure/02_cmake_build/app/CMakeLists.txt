@@ -4,5 +4,5 @@
 
 target_link_libraries(vehicle_app
     PRIVATE
-    vehicle_lib
+    controller_lib
 )
