@@ -11,4 +11,13 @@ namespace automotive {
     private:
         Vehicle& vehicle;
     };
+
+    class Speed {
+    public:
+        explicit Speed(double value);
+        void showSpeed();
+    private:
+        double value;
+    };
+    void PrintSpeed(Speed speed);
 }

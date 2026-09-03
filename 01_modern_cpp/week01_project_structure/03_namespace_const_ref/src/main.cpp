@@ -8,5 +8,16 @@ int main(void) {
 	automotive::VehicleController myController(myVehicle);
 	myController.setTargetSpeed(200.0);
 	myVehicle.showState();
+	
+	automotive::Speed test(100);
+	// automotive::speed test2 = 100.0; <- explicit 임으로 
+	//자동 static_cast<speed>(100.0); 실행 X error 발생
+	// 암시적 변환 허용 X 
+	test.showSpeed(); cout << endl;
+
+
+	//automotive::PrintSpeed(100.0); <- explicit Speed(double value);
+	// error
+	automotive::PrintSpeed(test);
 	return 0;
 }
