@@ -1,13 +1,14 @@
 ﻿#pragma once
 
 #include "Vehicle.hpp"
+namespace automotive {
+    class VehicleController {
+    public:
+        explicit VehicleController(Vehicle& vehicle);
 
-class VehicleController {
-public:
-    explicit VehicleController(Vehicle& vehicle);
+        void setTargetSpeed(double targetSpeed);
 
-    void setTargetSpeed(double targetSpeed);
-
-private:
-    Vehicle& vehicle;
-};
+    private:
+        Vehicle& vehicle;
+    };
+}
