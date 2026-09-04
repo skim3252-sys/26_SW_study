@@ -19,5 +19,20 @@ int main(void) {
 	//automotive::PrintSpeed(100.0); <- explicit Speed(double value);
 	// error
 	automotive::PrintSpeed(test);
+
+	automotive::Speed a{ 100.0 };
+
+	automotive::Speed b = a;   // Copy constructor
+
+	automotive::Speed c{ 50.0 };
+	c = a;         // Copy assignment
+
+	automotive::Speed d = std::move(a);		// Move constructor		
+
+	automotive::Speed e{ 30.0 };
+	e = std::move(b);		// Move assignment
+	
+	b.showSpeed(); cout << '\n';
+	e.showSpeed();
 	return 0;
 }

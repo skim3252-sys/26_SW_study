@@ -15,6 +15,14 @@ namespace automotive {
     class Speed {
     public:
         explicit Speed(double value);
+        
+        Speed(const Speed& other);
+        Speed& operator=(const Speed& other) noexcept;
+
+        Speed( Speed&& other);
+        Speed& operator=( Speed&& other) noexcept;
+
+
         void showSpeed();
     private:
         double value;
